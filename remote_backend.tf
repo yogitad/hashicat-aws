@@ -8,7 +8,7 @@ terraform {
   #}
   backend "s3" {
     bucket         = module.s3-bucket.s3_bucket_id
-    key            = "webserverstage/terraform.tfstate"
+    key            = var.db_remote_state_key
     region         =  var.region
     # encrypt        = true
   }
